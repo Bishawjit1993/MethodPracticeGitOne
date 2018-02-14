@@ -6,17 +6,35 @@ public class PracticeOne {
 	public static void main(String[] args) {
 		System.out.println("QUE-23:" + getFifthToTenthChar("Thisisastring"));
 		System.out.println("QUE-24:" + getAllWord("this is a string"));
+		System.out.println("QUE-26:" + getCount("this is a string", "a"));
 	}
+	/**
+	 * que-26: write a method that take one string & one word input and return the count of that given word.
+	 * parameter: String textOne, String textTwo
+	 * returnType: int
+	 * servingBucket: variable
+	 */
+	public static int getCount(String textOne, String textTwo) {
+		int count = 0;
+		String[] wordArray = textOne.split(" ");
+		for (int i = 0; i < wordArray.length; i++) {
+			if (wordArray[i].equalsIgnoreCase(textTwo)) {
+				count = count + 1;
+			}
+		}
+		return count;
+	}
+
 	/**
 	 * que-24: write a method that take one string input and return a list of all words.
 	 * parameter: String text
 	 * returnType: ArrayList<String>
 	 * servingBucket: list
 	 */
-	public static ArrayList<String> getAllWord(String text){
+	public static ArrayList<String> getAllWord(String text) {
 		ArrayList<String> allWord = new ArrayList<String>();
 		String[] wordArray = text.split(" ");
-		for(int i = 0; i < wordArray.length; i++) {
+		for (int i = 0; i < wordArray.length; i++) {
 			allWord.add(wordArray[i]);
 		}
 		return allWord;
