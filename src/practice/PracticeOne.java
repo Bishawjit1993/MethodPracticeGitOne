@@ -9,6 +9,44 @@ public class PracticeOne {
 		System.out.println("QUE-26:" + getCount("this is a string", "a"));
 		System.out.println("QUE-27:" + getCharacterCount("This is a string", 'a'));
 		System.out.println("QUE-28:" + getTrueFalse("this is ", "This"));
+		System.out.println("QUE-29:" + getConsonantCount("this is a string"));
+		System.out.println("QUE-30:" + getVowelCount("This is a string"));
+	}
+	/**
+	 * que-30: write a method that take one string input and return the count of all vowels.
+	 * parameter: String text
+	 * returnType: int
+	 * servingBucket: variable
+	 */
+	public static int getVowelCount(String text) {
+		int count = 0;
+		text = text.toLowerCase();
+		String vowel = "aeiou";
+		for (int i = 0; i < text.length(); i++) {
+			String textOne = String.valueOf(text.charAt(i));
+			if (vowel.contains(textOne)) {
+				count = count + 1;
+			}
+		}
+		return count;
+	}
+	/**
+	 * que-29: write a method that take one string input and return the count of all consonant.
+	 * parameter: String text
+	 * returnType: int
+	 * servingBucket: variable
+	 */
+	public static int getConsonantCount(String text) {
+		int count = 0;
+		text = text.toLowerCase();
+		String consonant = "abcdfghjklmnpqrstvwxyz";
+		for (int i = 0; i < text.length(); i++) {
+			String textOne = String.valueOf(text.charAt(i));
+			if (consonant.contains(textOne)) {
+				count = count + 1;
+			}
+		}
+		return count;
 	}
 	/**
 	 * que-28: write a method that take one string & one word input and return true if that sentence contains given word otherwise return false.
