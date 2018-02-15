@@ -11,6 +11,22 @@ public class PracticeOne {
 		System.out.println("QUE-28:" + getTrueFalse("this is ", "This"));
 		System.out.println("QUE-29:" + getConsonantCount("this is a string"));
 		System.out.println("QUE-30:" + getVowelCount("This is a string"));
+		System.out.println("QUE-31:" + getUpperCaseCount("thisGDGjssHD"));
+	}
+	/**
+	 * que-31: Write a method that take one string input and return the count of all uppercase characters.
+	 * parameter: String text
+	 * returnType: int
+	 * servingBucket: variable
+	 */
+	public static int getUpperCaseCount(String text) {
+		int count = 0;
+		for (int i = 0; i < text.length(); i++) {
+			if (Character.isUpperCase(text.charAt(i))) {
+				count = count + 1;
+			}
+		}
+		return count;
 	}
 	/**
 	 * que-30: write a method that take one string input and return the count of all vowels.
