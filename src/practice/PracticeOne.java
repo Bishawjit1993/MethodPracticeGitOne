@@ -7,6 +7,24 @@ public class PracticeOne {
 		System.out.println("QUE-23:" + getFifthToTenthChar("Thisisastring"));
 		System.out.println("QUE-24:" + getAllWord("this is a string"));
 		System.out.println("QUE-26:" + getCount("this is a string", "a"));
+		System.out.println("QUE-27:" + getCharacterCount("This is a string", 'a'));
+	}
+	/**
+	 * que-27: write a method that take one string & one character input and return the count of that given word.
+	 * parameter: String text, Char character
+	 * returnType: int
+	 * servingBucket: variable
+	 */
+	public static int getCharacterCount(String text, char character) {
+		int count = 0;
+		text = text.toLowerCase();
+		character = Character.toLowerCase(character);
+		for (int i = 0; i < text.length(); i++) {
+			if(text.charAt(i) == character) {
+				count = count + 1;
+			}
+		}
+		return count;
 	}
 	/**
 	 * que-26: write a method that take one string & one word input and return the count of that given word.
