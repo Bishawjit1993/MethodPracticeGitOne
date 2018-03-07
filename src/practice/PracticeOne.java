@@ -12,6 +12,23 @@ public class PracticeOne {
 		System.out.println("QUE-29:" + getConsonantCount("this is a string"));
 		System.out.println("QUE-30:" + getVowelCount("This is a string"));
 		System.out.println("QUE-31:" + getUpperCaseCount("thisGDGjssHD"));
+		int[] numArray = {2, 5, 1};
+		System.out.println("QUE-15:" + getMexNumber(numArray));
+	}
+	/**
+	 * que-write a method that take one number array input and return the max number.
+	 * returnType:int
+	 * parameter: int[] numarray
+	 * servingBucket: variable
+	 */
+	public static int getMexNumber(int[] numArray) {
+		int maxNumber = numArray[0];
+		for(int i = 0; i < numArray.length; i = i + 1) {
+			if(maxNumber < numArray[i]) {
+				maxNumber = numArray[i];
+			}
+		}
+		return maxNumber;
 	}
 	/**
 	 * que-31: Write a method that take one string input and return the count of all uppercase characters.
