@@ -17,6 +17,24 @@ public class PracticeOne {
 		System.out.println("QUE-46:" + getAlternateChar("thisisastring"));
 		System.out.println("QUE-47:" + getUpLowChar("thisiSASTring"));
 		System.out.println("QUE-45:" + getEmail("sgfsjfs bisjhawjit1993@gmail.com fgfgjf"));
+		System.out.println("QUE-44:" + getNumberList("this 4000 is 25 a 45 string"));
+	}
+	/**
+	 * que-44: write a method that take one string input which contain multiple numbers then return collect all of those numbers and return in a list.
+	 * parameter: String text
+	 * returnType: ArrayList<Integer>
+	 * servingBucket: list 
+	 */
+	public static ArrayList<Integer> getNumberList(String text){
+		ArrayList<Integer> numberList = new ArrayList<Integer>();
+		String[] wordArray = text.split(" ");
+		for(int i = 0; i < wordArray.length; i = i + 1) {
+			if(wordArray[i].matches("[0-9]+")) {
+				Integer value = Integer.valueOf(wordArray[i]);
+				numberList.add(value);
+			}
+		}
+		return numberList;
 	}
 	/**
 	 * que-45: write a method that take one string input which contain an email address then collect and return that email.
@@ -27,8 +45,8 @@ public class PracticeOne {
 	public static String getEmail(String text) {
 		String email = "";
 		String[] wordArray = text.split(" ");
-		for(int i = 0; i < wordArray.length; i = i + 1) {
-			if(wordArray[i].matches("[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\\.[a-zA-Z]+")) {
+		for (int i = 0; i < wordArray.length; i = i + 1) {
+			if (wordArray[i].matches("[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\\.[a-zA-Z]+")) {
 				email = wordArray[i];
 			}
 		}
