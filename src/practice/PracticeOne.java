@@ -16,17 +16,34 @@ public class PracticeOne {
 		System.out.println("QUE-15:" + getMexNumber(numArray));
 		System.out.println("QUE-46:" + getAlternateChar("thisisastring"));
 		System.out.println("QUE-47:" + getUpLowChar("thisiSASTring"));
+		System.out.println("QUE-45:" + getEmail("sgfsjfs bisjhawjit1993@gmail.com fgfgjf"));
 	}
 	/**
-	 * que- write a method that take one string input and return the same string by making uppercase of all alternative characters and rest of the characters in lowercase.
+	 * que-45: write a method that take one string input which contain an email address then collect and return that email.
+	 * parameter: string text
+	 * returnType: String 
+	 * servingBucket: variable
+	 */
+	public static String getEmail(String text) {
+		String email = "";
+		String[] wordArray = text.split(" ");
+		for(int i = 0; i < wordArray.length; i = i + 1) {
+			if(wordArray[i].matches("[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\\.[a-zA-Z]+")) {
+				email = wordArray[i];
+			}
+		}
+		return email;
+	}
+	/**
+	 * que-47: write a method that take one string input and return the same string by making uppercase of all alternative characters and rest of the characters in lowercase.
 	 * parameter: String text
 	 * returnType: string
 	 * servingBucket: variable
 	 */
 	public static String getUpLowChar(String text) {
 		String upLowChar = "";
-		for(int  i = 0; i < text.length(); i = i + 1) {
-			if(i % 2 == 1) {
+		for (int i = 0; i < text.length(); i = i + 1) {
+			if (i % 2 == 1) {
 				upLowChar = upLowChar + Character.toUpperCase(text.charAt(i));
 			} else {
 				upLowChar = upLowChar + Character.toLowerCase(text.charAt(i));
@@ -34,23 +51,24 @@ public class PracticeOne {
 		}
 		return upLowChar;
 	}
+
 	/**
-	 * que- write a method that take one string input and return all alternative characters as string.
+	 * que- 46: write a method that take one string input and return all alternative characters as string.
 	 * parameter: String text
 	 * returnType: String
 	 * servingBucket: variable
 	 */
 	public static String getAlternateChar(String text) {
 		String alternateChar = "";
-		for(int i = 0; i < text.length(); i = i + 1) {
-			if(i % 2 == 1) {
+		for (int i = 0; i < text.length(); i = i + 1) {
+			if (i % 2 == 1) {
 				alternateChar = alternateChar + text.charAt(i);
 			}
 		}
 		return alternateChar;
 	}
 	/**
-	 * que-write a method that take one number array input and return the max number.
+	 * que- 15: write a method that take one number array input and return the max number.
 	 * returnType:int
 	 * parameter: int[] numarray
 	 * servingBucket: variable
